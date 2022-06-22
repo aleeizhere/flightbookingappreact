@@ -1,0 +1,93 @@
+.lg {
+  width: 30rem;
+}
+.sm {
+  width: 20rem;
+}
+.inputcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  height: 10rem;
+  justify-content: space-around;
+}
+.inputfields {
+  position: relative;
+}
+.label {
+  display: block;
+  color: var(--white);
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+input {
+  width: 100%;
+  height: 1.5rem;
+  margin-top: 8px;
+  outline: none;
+  border: none;
+  padding: 4px 5px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.locationcontainer {
+  position: absolute;
+  display: block;
+  z-index: 1;
+}
+.row1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+}
+.seatclass {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+.seatclass input {
+  width: 1rem;
+  margin-top: 0px;
+}
+.seatclass label {
+  color: var(--white);
+  font-weight: 600;
+}
+.seatclasscontainer {
+  display: flex;
+}
+h1 {
+  color: var(--white);
+  font-size: 3rem;
+}
+.underline {
+  display: block;
+  width: 50rem;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 3px;
+  opacity: 0.3;
+}
+.submitbutton {
+  color: var(--blue);
+  padding: 0.7em 1.7em;
+  margin-top: 3rem;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+}
+
+.submitbutton:hover {
+  border: 1px solid white;
+}
+
+.submitbutton:active {
+  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}

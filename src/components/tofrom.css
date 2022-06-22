@@ -1,0 +1,15 @@
+.location {
+  display: block;
+  background-color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.3rem 0;
+  padding-left: 0.3rem;
+  border-bottom: 1px solid var(--blue);
+  border-radius: 4px;
+  font-weight: 800;
+  cursor: pointer;
+  width: 20rem;
+}
+.location:hover {
+  background-color: var(--lightblue);
+}
