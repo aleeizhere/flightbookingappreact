@@ -23,16 +23,20 @@ const UserInfo = () => {
   // jb fetch use krenge, initially flyingfrom ki array khali rahegi
   const [flyingfrom, inputfrom] = useState([]);
   const [flyingto, inputto] = useState([]);
-  const [locationvaluefrom, setvaluefrom] = useState("");
-  const [locationvalueto, setvalueto] = useState("");
+  let [locationvaluefrom, setvaluefrom] = useState("");
+  let [locationvalueto, setvalueto] = useState("");
+
   const setlocationvalue = (event) => {
     setvaluefrom(event.target.innerText);
+    inputfrom([]);
   };
   const setlocationvalueto = (event) => {
     setvalueto(event.target.innerText);
+    inputto([]);
   };
 
   const flyingfrominput = (event) => {
+    setvaluefrom(event.target.value); //hrr change pe locationvaluefrom ko update krega jo neeche se input tag ki value ko update krega
     inputfrom(
       event.target.value.length === 0
         ? []
@@ -44,6 +48,7 @@ const UserInfo = () => {
     );
   };
   const flyingtoinput = (event) => {
+    setvalueto(event.target.value);
     inputto(
       event.target.value.length === 0
         ? []
@@ -62,11 +67,13 @@ const UserInfo = () => {
         <div className="row1">
           <div className="inputfields sm">
             <span className="label">Flying from</span>
+
             <input
               type="search"
               onChange={flyingfrominput}
               value={locationvaluefrom}
             />
+
             <div className="locationcontainer">
               <Tofrom
                 Availablelocations={flyingfrom}
