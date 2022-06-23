@@ -67,7 +67,14 @@ const UserInfo = () => {
       availableflightsfrom.includes(locationvaluefrom) &&
       availableflightsto.includes(locationvalueto)
     ) {
-      navigate("/registration");
+      if (locationvaluefrom === locationvalueto) {
+        seterrorvalue("showwronginput");
+        setTimeout(() => {
+          seterrorvalue("hidewronginput");
+        }, 2000);
+      } else {
+        navigate("/registration");
+      }
     } else {
       seterrorvalue("showwronginput");
       setTimeout(() => {

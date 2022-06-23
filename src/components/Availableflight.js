@@ -7,7 +7,7 @@ const Availableflight = ({ resultset }) => {
         const { flightid, to, from, time, date, seattype, price, airline } =
           currval;
         return (
-          <div className="infodiv">
+          <div key={currval.flightid} className="infodiv">
             <div className="flightid">
               <h4>Flight ID</h4>
               <h3>{flightid}</h3>
