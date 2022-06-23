@@ -159,7 +159,7 @@ const UserInfo = () => {
         </div>
       </div>
       <span className="underline"></span>
-      <div className={`hidewronginput ${showerrorvalue}`}>
+      <div className={`showwronginput ${showerrorvalue}`}>
         <h3>Wrong Input</h3>
         <h5>Make sure your inputs are from available options</h5>
       </div>

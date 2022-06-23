@@ -27,4 +27,5 @@ body {
   background-color: var(--blue);
   border-radius: 0.5rem;
   box-shadow: 0px 8px 20px 0px #00496e9f;
+  position: relative;
 }

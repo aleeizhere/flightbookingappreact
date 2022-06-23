@@ -94,8 +94,8 @@ h1 {
 .hidewronginput {
   display: none;
   position: absolute;
-  top: 5%;
-  right: 25%;
+  top: 2%;
+  right: 2%;
   background-color: rgb(236, 67, 67);
   padding: 0.2rem 2rem;
   border-radius: 3px;
@@ -113,4 +113,6 @@ h1 {
 }
 .showwronginput {
   display: inline-block;
+  /* opacity: 1; */
+  /* transition: opacity 0.8s ease; */
 }
