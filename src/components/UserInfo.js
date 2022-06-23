@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./userinfo.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import availableflightAPI from "../availableflightAPI";
 import Tofrom from "./Tofrom";
 
 const UserInfo = () => {
+  const navigate = useNavigate();
   const fromall = availableflightAPI.map((e) => e.from);
   const fromto = availableflightAPI.map((e) => e.to);
 
@@ -25,6 +26,7 @@ const UserInfo = () => {
   const [flyingto, inputto] = useState([]);
   let [locationvaluefrom, setvaluefrom] = useState("");
   let [locationvalueto, setvalueto] = useState("");
+  let [showerrorvalue, seterrorvalue] = useState("hidewronginput");
 
   const setlocationvalue = (event) => {
     setvaluefrom(event.target.innerText);
@@ -58,6 +60,20 @@ const UserInfo = () => {
               : null;
           })
     );
+  };
+  // ek aisa function chahie jo check kray whether the value in to and from is coming from the list of avaialable flights
+  const checkinput = () => {
+    if (
+      availableflightsfrom.includes(locationvaluefrom) &&
+      availableflightsto.includes(locationvalueto)
+    ) {
+      navigate("/registration");
+    } else {
+      seterrorvalue("showwronginput");
+      setTimeout(() => {
+        seterrorvalue("hidewronginput");
+      }, 2000);
+    }
   };
   return (
     <>
@@ -136,9 +152,13 @@ const UserInfo = () => {
         </div>
       </div>
       <span className="underline"></span>
-      <Link to="/registration">
-        <button className="submitbutton">Search</button>
-      </Link>
+      <div className={`hidewronginput ${showerrorvalue}`}>
+        <h3>Wrong Input</h3>
+        <h5>Make sure your inputs are from available options</h5>
+      </div>
+      <button className="submitbutton" onClick={checkinput}>
+        Search
+      </button>
     </>
   );
 };

@@ -59,5 +59,15 @@ const availableflightAPI = [
     price: "Rs. 25,000",
     airline: "Airsial",
   },
+  {
+    flightid: "7",
+    to: "TEHRAN",
+    from: "SHARJAH",
+    time: "21:00",
+    date: "31 JAN 2022",
+    seattype: "ECONOMY",
+    price: "Rs. 122,000",
+    airline: "IRAN AIRWAYS",
+  },
 ];
 export default availableflightAPI;

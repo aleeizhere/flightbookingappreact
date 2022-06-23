@@ -91,3 +91,26 @@ h1 {
 .submitbutton:active {
   box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
 }
+.hidewronginput {
+  display: none;
+  position: absolute;
+  top: 5%;
+  right: 25%;
+  background-color: rgb(236, 67, 67);
+  padding: 0.2rem 2rem;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.411);
+}
+.showwronginput h3 {
+  color: var(--white);
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+.showwronginput h5{
+  margin: 0;
+  margin-top: 5px;
+}
+.showwronginput{
+  display: inline-block;
+}
