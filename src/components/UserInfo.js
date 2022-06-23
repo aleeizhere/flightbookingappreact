@@ -120,7 +120,7 @@ const UserInfo = () => {
           </div>
           <div className="inputfields sm">
             <span className="label">No. of Passengers</span>
-            <input type="text" />
+            <input required type="text" />
           </div>
         </div>
         <div className="row2">
@@ -154,12 +154,12 @@ const UserInfo = () => {
           <div className="inputfields lg">
             <span className="label">Date of travel</span>
 
-            <input type="date" />
+            <input required type="date" />
           </div>
         </div>
       </div>
       <span className="underline"></span>
-      <div className={`showwronginput ${showerrorvalue}`}>
+      <div className={`hidewronginput ${showerrorvalue}`}>
         <h3>Wrong Input</h3>
         <h5>Make sure your inputs are from available options</h5>
       </div>
