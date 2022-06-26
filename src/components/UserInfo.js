@@ -3,6 +3,7 @@ import "./userinfo.css";
 import { useNavigate } from "react-router-dom";
 import availableflightAPI from "../availableflightAPI";
 import Tofrom from "./Tofrom";
+import TravelerModal from "./TravelerModal";
 
 const UserInfo = () => {
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ const UserInfo = () => {
   let [locationvaluefrom, setvaluefrom] = useState("");
   let [locationvalueto, setvalueto] = useState("");
   let [showerrorvalue, seterrorvalue] = useState("hidewronginput");
+  let [showmodal, setshowmodal] = useState(false);
 
   const setlocationvalue = (event) => {
     setvaluefrom(event.target.innerText);
@@ -120,37 +122,11 @@ const UserInfo = () => {
           </div>
           <div className="inputfields sm">
             <span className="label">No. of Passengers</span>
-            <input required type="text" />
+            <input required type="text" onClick={setshowmodal(!showmodal)} />
+            <TravelerModal showmodal />
           </div>
         </div>
         <div className="row2">
-          <div className="inputfields lg">
-            <span className="label">Seat class</span>
-
-            <div className="seatclasscontainer" style={{ marginTop: "0.5rem" }}>
-              <div className="seatclass">
-                <input
-                  type="radio"
-                  id="economy"
-                  name="seattype"
-                  value="economy"
-                  defaultChecked
-                />
-                <label htmlFor="economy">Economy</label>
-              </div>
-
-              <div className="seatclass">
-                <input
-                  type="radio"
-                  id="business"
-                  name="seattype"
-                  value="business"
-                />
-                <label htmlFor="business">Business</label>
-              </div>
-            </div>
-          </div>
-
           <div className="inputfields lg">
             <span className="label">Date of travel</span>
 

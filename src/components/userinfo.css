@@ -2,7 +2,7 @@
   width: 30rem;
 }
 .sm {
-  width: 20rem;
+  width: 20vw;
 }
 .inputcontainer {
   display: flex;
@@ -85,7 +85,7 @@ h1 {
 }
 
 .submitbutton:hover {
-  border: 1px solid white;
+  border: 1px solid var(--blue);
 }
 
 .submitbutton:active {
