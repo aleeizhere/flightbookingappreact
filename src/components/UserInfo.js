@@ -84,6 +84,7 @@ const UserInfo = () => {
       }, 2000);
     }
   };
+
   return (
     <>
       <h1>Search Flights</h1>
@@ -121,9 +122,15 @@ const UserInfo = () => {
             </div>
           </div>
           <div className="inputfields sm">
-            <span className="label">No. of Passengers</span>
-            <input required type="text" onClick={setshowmodal(!showmodal)} />
-            <TravelerModal showmodal />
+            <span className="label">Travelers</span>
+            <input
+              required
+              type="text"
+              onClick={() => {
+                setshowmodal(!showmodal);
+              }}
+            />
+            <TravelerModal showmodal={showmodal} />
           </div>
         </div>
         <div className="row2">

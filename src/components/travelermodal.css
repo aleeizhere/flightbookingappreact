@@ -1,0 +1,13 @@
+.modalcontainer{
+    position: absolute;
+    background-color: var(--white);
+    top: -100;
+    margin: 5px 0;
+    width: 120%;
+    padding: 0 4px;
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.233);
+}
+.modalcontainer>h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}

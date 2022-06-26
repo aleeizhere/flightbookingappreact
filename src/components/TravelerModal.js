@@ -1,11 +1,12 @@
 import React from "react";
+import "./travelermodal.css"
 
-const TravelerModal = (showmodal) => {
-  if (showmodal) {
+const TravelerModal = ({ showmodal }) => {
+  if (showmodal === true) {
     return (
       <>
         <div className="modalcontainer">
-          <h2>Im the modal</h2>
+          <h4>Im the modal</h4>
         </div>
       </>
     );

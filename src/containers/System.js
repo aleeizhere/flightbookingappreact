@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import UserInfo from "../components/UserInfo";
 import Availableflight from "../components/Availableflight";
 import availableflightAPI from "../availableflightAPI";
@@ -13,7 +13,7 @@ export const System = () => {
   */
 
   return (
-    <>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route
@@ -32,7 +32,7 @@ export const System = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 };
 export default System;
