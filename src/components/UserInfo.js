@@ -28,7 +28,7 @@ const UserInfo = () => {
   let [locationvaluefrom, setvaluefrom] = useState("");
   let [locationvalueto, setvalueto] = useState("");
   let [showerrorvalue, seterrorvalue] = useState("hidewronginput");
-  let [showmodal, setshowmodal] = useState(false);
+  let [showmodal, setshowmodal] = useState(true);
 
   const setlocationvalue = (event) => {
     setvaluefrom(event.target.innerText);
