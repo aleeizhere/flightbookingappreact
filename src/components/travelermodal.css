@@ -50,10 +50,10 @@ h6 {
   text-align: center;
   transition: all 0.2s ease;
 }
-/* .section .labelcontainer:hover {
+.section .labelcontainer:hover {
   background-color: var(--yellow);
   border: 1px solid var(--yellow);
-} */
+}
 .section .labelcontainer h5 {
   font-size: 12px;
 }
@@ -61,10 +61,6 @@ h6 {
 .classoptions #bus:checked ~ .bus .labelcontainer,
 .classoptions #peco:checked ~ .peco .labelcontainer,
 .classoptions #fclass:checked ~ .fclass .labelcontainer {
-  background-color: var(--yellow);
-  border: 1px solid var(--yellow);
-}
-.classoptions #econ:checked ~ label .labelcontainer {
   background-color: var(--yellow);
   border: 1px solid var(--yellow);
 }
