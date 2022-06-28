@@ -29,6 +29,13 @@ const UserInfo = () => {
   let [locationvalueto, setvalueto] = useState("");
   let [showerrorvalue, seterrorvalue] = useState("hidewronginput");
   let [showmodal, setshowmodal] = useState(true);
+  let [adultcount, setadultcount] = useState(1);
+  let [childcount, setchildcount] = useState(0);
+  let [infantcount, setinfantcount] = useState(0);
+  let [seattype, setseattype] = useState("Economy");
+  let [travval, settravval] = useState(
+    `${seattype} | ${adultcount} Adults, ${childcount} Children, ${infantcount} Infants`
+  );
 
   const setlocationvalue = (event) => {
     setvaluefrom(event.target.innerText);
@@ -129,8 +136,21 @@ const UserInfo = () => {
               onClick={() => {
                 setshowmodal(!showmodal);
               }}
+              readOnly
+              value={travval}
             />
-            <TravelerModal showmodal={showmodal} />
+            <TravelerModal
+              showmodal={showmodal}
+              adultcount={adultcount}
+              setadultcount={setadultcount}
+              childcount={childcount}
+              setchildcount={setchildcount}
+              infantcount={infantcount}
+              setinfantcount={setinfantcount}
+              setseattype={setseattype}
+              seattype={seattype}
+              settravval={settravval}
+            />
           </div>
         </div>
         <div className="row2">

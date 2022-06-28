@@ -8,4 +8,4 @@ travchild ka state variable
 Phir System component main aik state variable userdata ke naam se hoga. Iss variable main aik array ayegi
 jissmain user ka tamaam data hoga. Iss variable ka setter function Userinfo component ko as a prop provide
 kia jayega. Yeh function aik array as a perimeter lega uss array main locationvalueto, locationvaluefrom,
-travseat, travadults, travchild.
+travseat, travadults, travchild, travdate shamiil hogi.

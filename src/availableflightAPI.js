@@ -65,7 +65,7 @@ const availableflightAPI = [
     from: "SHARJAH",
     time: "21:00",
     date: "31 JAN 2022",
-    seattype: "ECONOMY",
+    seattype: "Economy",
     price: "Rs. 122,000",
     airline: "IRAN AIRWAYS",
   },
