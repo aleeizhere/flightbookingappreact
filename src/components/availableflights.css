@@ -1,15 +1,77 @@
+:root {
+  --numb: 0;
+}
 .mainComponent {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+.container:hover {
+  filter: drop-shadow(0rem 3px 20px #7ec6f26e);
+}
 .infodiv {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 50rem;
+  background: none;
+  border-radius: 10px;
+}
+
+.infodiv h4 {
+  font-size: 10px;
+}
+.infodiv > div {
   background-color: var(--lightblue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid black;
+  height: 5rem;
   padding: 0 3rem;
-  margin: 3rem 0;
+  width: 5rem;
+}
+.infodiv > div:nth-child(2) {
+  border-radius: 10px 0 0 10px;
+}
+.infodiv .price {
+  border-right: none;
+  border-radius: 0px 10px 0px 0px;
+  font-size: 20px;
+  background-color: var(--yellow);
+}
+.infodiv .airline {
+  background: none;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+.infodiv .airline img {
+  width: 3rem;
+}
+
+.container .selbtn {
+  padding: 0.2rem 3.85rem;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  color: var(--white);
+  border-radius: 0px 0px 10px 10px;
+  background-color: var(--blue);
+  transition: background-color, color, 0.3s ease;
+}
+
+.container .selbtn:hover {
+  background-color: var(--lightblue);
 }

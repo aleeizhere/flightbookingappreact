@@ -12,6 +12,7 @@ const availableflightAPI = [
     fclassseat: 30,
     price: "Rs. 25,000",
     airline: "Airsial",
+    logo: "",
   },
   {
     flightid: "2",
@@ -26,6 +27,7 @@ const availableflightAPI = [
     fclassseat: 30,
     price: "Rs. 67,390",
     airline: "Airsial",
+    logo: "",
   },
   {
     flightid: "3",
@@ -40,6 +42,7 @@ const availableflightAPI = [
     fclassseat: 30,
     price: "Rs. 98,300",
     airline: "Serene Air",
+    logo: "",
   },
   {
     flightid: "4",
@@ -53,7 +56,8 @@ const availableflightAPI = [
     preconseat: 20,
     fclassseat: 30,
     price: "Rs. 48,720",
-    airline: "Pakistan International Airlines",
+    airline: "Emirates",
+    logo: "",
   },
   {
     flightid: "5",
@@ -66,8 +70,24 @@ const availableflightAPI = [
     busseat: 30,
     preconseat: 20,
     fclassseat: 30,
+    price: "Rs. 57,620",
+    airline: "Qatar Airways",
+    logo: "",
+  },
+  {
+    flightid: "6",
+    to: "LAHORE",
+    from: "ABU DHABI",
+    airport: "ALLAMA IQBAL INTERNATIONAL",
+    time: "12:00",
+    date: "3 AUG 2022",
+    econseats: 300,
+    busseat: 30,
+    preconseat: 20,
+    fclassseat: 30,
     price: "Rs. 58,620",
-    airline: "Serene Air",
+    airline: "Emirates",
+    logo: "",
   },
 ];
 export default availableflightAPI;
