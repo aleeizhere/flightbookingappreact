@@ -30,7 +30,45 @@ const Availableflight = ({ userdata, resultset }) => {
       }
     }
   }
-  return <div className="mainComponent"></div>;
+  return (
+    <div className="mainComponent">
+      {filteredarray.map((flight) => {
+        const { flightid, from, to, time, date, airline, price } = flight;
+        return (
+          <div className="infodiv">
+            <div className="flightid">
+              <h4>Flight ID</h4>
+              <h3>{flightid}</h3>
+            </div>
+            <div className="from">
+              <h4>From</h4>
+              <h3>{from}</h3>
+            </div>
+            <div className="to">
+              <h4>To</h4>
+              <h3>{to}</h3>
+            </div>
+            <div className="time">
+              <h4>Time</h4>
+              <h3>{time}</h3>
+            </div>
+            <div className="date">
+              <h4>Date</h4>
+              <h3>{date}</h3>
+            </div>
+            <div className="airline">
+              <h4>Airline</h4>
+              <h3>{airline}</h3>
+            </div>
+            <div className="price">
+              <h4>Price</h4>
+              <h3>{price}</h3>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Availableflight;
