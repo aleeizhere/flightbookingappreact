@@ -2,7 +2,7 @@ import React from "react";
 import "./availableflights.css";
 const Availableflight = ({ userdata, resultset }) => {
   const { clientfrom, clientto, adults, child, infant, type } = userdata;
-  let filteredarray = [resultset[3],resultset[0]];
+  let filteredarray = [];
   for (let currval of resultset) {
     const { to, from, econseats, busseats, preconseat, fclassseat } = currval;
 
@@ -50,10 +50,14 @@ const Availableflight = ({ userdata, resultset }) => {
     } else if (eachflight.airline === "Emirates") {
       eachflight.logo =
         "https://s3.ap-south-1.amazonaws.com/st-airline-images/EK.png";
+    } else if (eachflight.airline === "American Airlines") {
+      eachflight.logo =
+        "https://s3.ap-south-1.amazonaws.com/st-airline-images/AA.png";
     }
   }
   return (
     <div className="mainComponent">
+      <h3 className="header">Available Flights</h3>
       {filteredarray.map((flight) => {
         const { flightid, from, to, time, date, airline, price, logo } = flight;
         return (

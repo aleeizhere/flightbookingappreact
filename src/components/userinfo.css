@@ -64,6 +64,7 @@
 h1 {
   color: var(--white);
   font-size: 3rem;
+  margin-top: 1rem;
 }
 .underline {
   display: block;

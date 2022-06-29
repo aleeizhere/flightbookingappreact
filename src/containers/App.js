@@ -1,11 +1,14 @@
 import "../App.css";
+import Navbar from "../components/Navbar";
 import System from "../containers/System";
 function App() {
-  
   return (
-    <div className="main-container">
-      <System />
-    </div>
+    <>
+      <Navbar />
+      <div className="main-container">
+        <System />
+      </div>
+    </>
   );
 }
 
