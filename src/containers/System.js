@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import UserInfo from "../components/UserInfo";
 import Availableflight from "../components/Availableflight";
 import availableflightAPI from "../availableflightAPI";
@@ -11,7 +11,8 @@ export const System = () => {
     changestate(newstate);
   };
   */
-
+  const [userdata, setuserdata] = useState("");
+  console.log(userdata)
   return (
     <div>
       <BrowserRouter>
@@ -20,13 +21,13 @@ export const System = () => {
             path="/"
             element={
               <div className="system-container">
-                <UserInfo />
+                <UserInfo setuserdata={setuserdata} />
               </div>
             }
           ></Route>
           <Route
             path="/registration"
-            element={<Availableflight resultset={availableflightAPI} />}
+            element={<Availableflight resultset={availableflightAPI} userdata = {userdata} />}
           >
             ;
           </Route>

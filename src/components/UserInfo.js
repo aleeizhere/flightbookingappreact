@@ -5,7 +5,7 @@ import availableflightAPI from "../availableflightAPI";
 import Tofrom from "./Tofrom";
 import TravelerModal from "./TravelerModal";
 
-const UserInfo = () => {
+const UserInfo = ({ setuserdata }) => {
   const navigate = useNavigate();
   const fromall = availableflightAPI.map((e) => e.from);
   const fromto = availableflightAPI.map((e) => e.to);
@@ -28,7 +28,7 @@ const UserInfo = () => {
   let [locationvaluefrom, setvaluefrom] = useState("");
   let [locationvalueto, setvalueto] = useState("");
   let [showerrorvalue, seterrorvalue] = useState("hidewronginput");
-  let [showmodal, setshowmodal] = useState(true);
+  let [showmodal, setshowmodal] = useState(false);
   let [adultcount, setadultcount] = useState(1);
   let [childcount, setchildcount] = useState(0);
   let [infantcount, setinfantcount] = useState(0);
@@ -36,7 +36,14 @@ const UserInfo = () => {
   let [travval, settravval] = useState(
     `${seattype} | ${adultcount} Adults, ${childcount} Children, ${infantcount} Infants`
   );
-
+  let userdata = {
+    clientfrom: locationvaluefrom,
+    clientto: locationvalueto,
+    adults: adultcount,
+    child: childcount,
+    infant: infantcount,
+    type: seattype,
+  };
   const setlocationvalue = (event) => {
     setvaluefrom(event.target.innerText);
     inputfrom([]);
@@ -82,6 +89,7 @@ const UserInfo = () => {
           seterrorvalue("hidewronginput");
         }, 2000);
       } else {
+        setuserdata(userdata);
         navigate("/registration");
       }
     } else {
