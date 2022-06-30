@@ -23,7 +23,7 @@ body {
 .system-container {
   width: 80vw;
   padding: 1rem 3rem;
-  height: 80vh;
+  height: 70vh;
   background-color: var(--blue);
   /* border-radius: 0.5rem; */
   position: relative;

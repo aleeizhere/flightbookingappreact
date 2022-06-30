@@ -159,5 +159,21 @@ const availableflightAPI = [
     airline: "American Airlines",
     logo: "",
   },
+  {
+    flightid: "11",
+    to: "LAHORE",
+    from: "ABU DHABI",
+    airportto: "Allama Iqbal International",
+    airportfrom: "Abu Dhabi International",
+    time: "12:00",
+    date: "4 AUG 2022",
+    econseats: 300,
+    busseat: 30,
+    preconseat: 20,
+    fclassseat: 30,
+    price: "Rs. 45,870",
+    airline: "Emirates",
+    logo: "",
+  },
 ];
 export default availableflightAPI;

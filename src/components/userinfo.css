@@ -7,8 +7,8 @@
 .inputcontainer {
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   height: 10rem;
   justify-content: space-around;
 }

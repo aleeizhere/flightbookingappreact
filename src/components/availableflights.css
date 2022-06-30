@@ -19,7 +19,10 @@
   transition: all 0.3s ease;
 }
 .container:hover {
-  filter: drop-shadow(0rem 3px 20px #7ec6f26e);
+  filter: drop-shadow(0rem 3px 20px #7ec6f298);
+}
+.container:last-child{
+  margin-bottom: 3rem;
 }
 .infodiv {
   display: flex;
@@ -45,6 +48,7 @@
 .infodiv > div:nth-child(2) {
   border-radius: 10px 0 0 10px;
 }
+
 .infodiv .price {
   border-right: none;
   border-radius: 0px 10px 0px 0px;

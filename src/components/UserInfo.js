@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import availableflightAPI from "../availableflightAPI";
 import Tofrom from "./Tofrom";
 import TravelerModal from "./TravelerModal";
+import { useEffect } from "react";
 
 const UserInfo = ({ setuserdata }) => {
   const navigate = useNavigate();
@@ -44,6 +45,25 @@ const UserInfo = ({ setuserdata }) => {
     infant: infantcount,
     type: seattype,
   };
+  function rendertravelmodal(displayval) {
+    if (displayval) {
+      return (
+        <TravelerModal
+          adultcount={adultcount}
+          setadultcount={setadultcount}
+          childcount={childcount}
+          setchildcount={setchildcount}
+          infantcount={infantcount}
+          setinfantcount={setinfantcount}
+          setseattype={setseattype}
+          seattype={seattype}
+          settravval={settravval}
+        />
+      );
+    }
+  }
+  // rendertravelmodal sirf jab hi run hoga jb showmodal ka state variable change hoga
+  // useEffect(rendertravelmodal(showmodal), [showmodal]);
   const setlocationvalue = (event) => {
     setvaluefrom(event.target.innerText);
     inputfrom([]);
@@ -147,18 +167,7 @@ const UserInfo = ({ setuserdata }) => {
               readOnly
               value={travval}
             />
-            <TravelerModal
-              showmodal={showmodal}
-              adultcount={adultcount}
-              setadultcount={setadultcount}
-              childcount={childcount}
-              setchildcount={setchildcount}
-              infantcount={infantcount}
-              setinfantcount={setinfantcount}
-              setseattype={setseattype}
-              seattype={seattype}
-              settravval={settravval}
-            />
+            {rendertravelmodal(showmodal)}
           </div>
         </div>
         <div className="row2">

@@ -3,6 +3,7 @@ import UserInfo from "../components/UserInfo";
 import Availableflight from "../components/Availableflight";
 import availableflightAPI from "../availableflightAPI";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 export const System = () => {
   // creating the state function to update the rendered components conditionally
   /*
@@ -12,10 +13,8 @@ export const System = () => {
   };
   */
   const [userdata, setuserdata] = useState("");
-  console.log(userdata)
   return (
     <div>
-      
       <BrowserRouter>
         <Routes>
           <Route

@@ -2,6 +2,7 @@
   position: absolute;
   background-color: var(--white);
   top: -100;
+  left: -20%;
   margin: 5px 0;
   width: 140%;
   padding: 8px 4px;
@@ -15,7 +16,7 @@
 .section .sectionhead {
   font-size: 1rem;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .section .classoptions {
   margin-top: 1rem;
@@ -66,7 +67,7 @@ h6 {
 }
 
 .travelers .traveleroptions {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -81,7 +82,6 @@ h6 {
   align-items: center;
   padding: 0.5rem 0;
 }
-
 .travelers .optionsrow .ageinfo {
   display: flex;
   width: 10vw;
