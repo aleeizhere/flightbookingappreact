@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import availableflightAPI from "../availableflightAPI";
 import Tofrom from "./Tofrom";
 import TravelerModal from "./TravelerModal";
-import { useEffect } from "react";
 
 const UserInfo = ({ setuserdata }) => {
   const navigate = useNavigate();
