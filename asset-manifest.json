@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flightbookingappreact/static/css/main.c3fbff6f.css",
+    "main.js": "/flightbookingappreact/static/js/main.d2f97b65.js",
+    "index.html": "/flightbookingappreact/index.html",
+    "main.c3fbff6f.css.map": "/flightbookingappreact/static/css/main.c3fbff6f.css.map",
+    "main.d2f97b65.js.map": "/flightbookingappreact/static/js/main.d2f97b65.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3fbff6f.css",
+    "static/js/main.d2f97b65.js"
+  ]
+}
