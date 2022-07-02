@@ -18,7 +18,7 @@ export const System = () => {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/flightbookingappreact"
             element={
               <div className="system-container">
                 <UserInfo setuserdata={setuserdata} />
@@ -27,7 +27,12 @@ export const System = () => {
           ></Route>
           <Route
             path="/registration"
-            element={<Availableflight resultset={availableflightAPI} userdata = {userdata} />}
+            element={
+              <Availableflight
+                resultset={availableflightAPI}
+                userdata={userdata}
+              />
+            }
           >
             ;
           </Route>
