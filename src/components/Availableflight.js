@@ -57,14 +57,21 @@ const Availableflight = ({ userdata, resultset }) => {
   }
   return (
     <div className="mainComponent">
-      <h3 className="header">Available Flights</h3>
+      {filteredarray.length !== 0 ? (
+        <h3 className="header">Available Flights</h3>
+      ) : (
+        <h3 className="header">
+          Sorry! No Available Flights on requested locations
+        </h3>
+      )}
+
       {filteredarray.map((flight) => {
         const { flightid, from, to, time, date, airline, price, logo } = flight;
         return (
           <div className="container">
             <div className="infodiv">
               <div className="airline">
-                <img src={logo} alt={`${airline} Logo`} />
+                <img src={logo} alt={`loading...`} />
                 {airline}
               </div>
               <div className="flightid">

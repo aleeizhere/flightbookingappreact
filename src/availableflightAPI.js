@@ -175,5 +175,21 @@ const availableflightAPI = [
     airline: "Emirates",
     logo: "",
   },
+  {
+    flightid: "12",
+    to: "ISLAMABAD",
+    from: "KARACHI",
+    airportto: "ISLAMABAD INTERNATIONAL",
+    airportfrom: "JINNAH INTERNATIONAL",
+    time: "15:30",
+    date: "28 AUG 2022",
+    econseats: 300,
+    busseat: 30,
+    preconseat: 20,
+    fclassseat: 30,
+    price: "Rs. 32,870",
+    airline: "Serene Air",
+    logo: "",
+  },
 ];
 export default availableflightAPI;
